@@ -16,15 +16,10 @@
     "angular-ui-bootstrap": "^2.0.1",
     "angular-ui-router": "^0.3.1",
     "font-awesome": "^4.6.3",
-<<<<<<< HEAD
     "highlight.js": "^9.6.0",
     "impress.js": "^0.6.0",
     "lodash": "^4.14.2",
     "showdown": "^1.4.3"
-=======
-    "impress.js": "^0.6.0",
-    "lodash": "^4.14.2"
->>>>>>> 63a127c2519aa4394b697f666afcad8a9dab5838
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",

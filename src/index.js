@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import 'impress.js';
 import 'highlight.js';
 
 import angularAnimate from 'angular-animate';
-=======
-import impressJs from 'impress.js';
-
-import angularAnimate from 'angular-animate';
-import angularUIRouter from 'angular-ui-router';
->>>>>>> 63a127c2519aa4394b697f666afcad8a9dab5838
 import angularUIBootstrap from 'angular-ui-bootstrap';
 
 import env from './scripts/common/env.js';
@@ -19,10 +12,6 @@ import services from './scripts/services/index.js';
 
 export const angularTutorial = angular.module('angularTutorial', [
 angularAnimate,
-<<<<<<< HEAD
-=======
-angularUIRouter,
->>>>>>> 63a127c2519aa4394b697f666afcad8a9dab5838
 angularUIBootstrap,
 env,
 debug,
