@@ -1,4 +1,4 @@
-export default function($httpProvider, $locationProvider, pptProvider) {
+export default function($httpProvider, $locationProvider) {
     'ngInject';
 
 
@@ -13,5 +13,4 @@ export default function($httpProvider, $locationProvider, pptProvider) {
         };
     });
 
-    pptProvider.target('ppt');
 };

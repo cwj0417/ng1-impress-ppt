@@ -7,7 +7,8 @@ export default (ppt) => {
 		transclude:true,
 		link: (scope, ele, attr) => {
 			angular.element(ele).attr('id', attr.name || 'ppt');
-			ppt.init();
+			ppt.handle = impress(attr.name || 'ppt');
+			ppt.handle.init();
 		}
 	}
 }
