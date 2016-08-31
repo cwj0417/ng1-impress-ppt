@@ -1,3 +1,5 @@
+import impressJs from 'impress.js';
+
 import angularAnimate from 'angular-animate';
 import angularUIRouter from 'angular-ui-router';
 import angularUIBootstrap from 'angular-ui-bootstrap';
@@ -5,26 +7,25 @@ import angularUIBootstrap from 'angular-ui-bootstrap';
 import env from './scripts/common/env.js';
 import debug from './scripts/common/debug.js';
 
-export const Kaas = angular.module('kaas', [
+import directives from './scripts/directives/index.js';
+import services from './scripts/services/index.js';
+
+export const angularTutorial = angular.module('angularTutorial', [
 angularAnimate,
 angularUIRouter,
 angularUIBootstrap,
 env,
-debug
+debug,
+directives,
+services
 ]);
 
 import config from './scripts/common/config.js';
-Kaas.config(config);
+angularTutorial.config(config);
 
+import appCtrl from './scripts/controllers/angularTutorial.js';
+angularTutorial.controller('angularTutorial', appCtrl);
 
-Kaas.run((debug) => {
-	debug.info('Kaas is working!');
-
-})
-
-Kaas.controller('kaas', ($scope) => {
-	$scope.test = "testing";
-})
 if(module.hot){
 	module.hot.accept();
 }

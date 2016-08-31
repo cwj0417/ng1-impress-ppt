@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-strict-di ng-app="angularTutorial" ng-controller="angularTutorial">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>kaas</title>
+        <title>{{appTitle}}</title>
     </head>
-    <body ng-strict-di ng-app="kaas" ng-controller="kaas">
-            {{test}}
+    <body>
+        <ppt>
+
+        	<slide config=config.cover>
+			    i am cover of this ppt
+			</slide>
+
+			<slide config=config.content>
+			    i am content of this ppt, and shoud have links to other pages
+			</slide>
+
+			<slide config=config.cat_1>
+			    i am first page of ppt~
+			</slide>
+
+        </ppt>
     </body>
 </html>
