@@ -10,7 +10,11 @@ var config = {
 	entry: {
 	    main: path.join(srcPath, 'index.js'),
         styles: path.join(srcPath, 'styles.js'),
+<<<<<<< HEAD
         vendor:["angular","lodash","showdown","impress.js","highlight.js"]
+=======
+        vendor:["angular","lodash"]
+>>>>>>> 63a127c2519aa4394b697f666afcad8a9dab5838
 	},
     output: {
         path: 'dist',
