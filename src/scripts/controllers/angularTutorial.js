@@ -17,11 +17,10 @@ export default ($scope, debug, ppt) => {
 		directive: ppt.config('directive', {s:10,rx:0,ry:0,x:0,y:2000}),
 		directive_1: ppt.config('directive_1', {s:1,rz:180}),
 		makeup: ppt.config('makeup', {s:10,rx:0,ry:0,x:0,y:3000,rz:360}),
-		makeup_1: ppt.config('makeup_1', {s:50,ry:90}),
+		makeup_1: ppt.config('makeup_1', {s:10,ry:90}),
 		promise: ppt.config('promise', {s:10,rx:0,ry:360,x:0,y:4000}),
 		promise_1: ppt.config('promise_1', {s:1,rx:-120,rz:270,x:-4600}),
 		promise_2: ppt.config('promise_2', {s:1,rx:-240,x:-5600}),
-		promise_3: ppt.config('promise_3', {s:1,rx:-360,x:-6600}),
-		airscape: ppt.config('airscape', {s:15,x:0,y:0,rx:0,ry:0,rz:0}),
+		promise_3: ppt.config('promise_3', {s:1,rx:-360,x:-6600})
 	};
 };
