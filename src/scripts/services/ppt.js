@@ -18,14 +18,14 @@ export default () => {
 		config:(id, opt = {}) => {
 			return latest = new pptConfig(
 				id,
-				opt.x || latest['data-x'],
-				opt.y || latest['data-y'],
-				opt.z || latest['data-z'],
-				opt.s || latest['data-scale'],
-				opt.r || latest['data-rotate'],
-				opt.rx || latest['data-rotate-x'],
-				opt.ry || latest['data-rotate-y'],
-				opt.rz || latest['data-rotate-z'],
+				('x' in opt) ? opt.x : latest['data-x'],
+				('y' in opt) ? opt.y : latest['data-y'],
+				('z' in opt) ? opt.z : latest['data-z'],
+				('s' in opt) ? opt.s : latest['data-scale'],
+				('r' in opt) ? opt.r : latest['data-rotate'],
+				('rx' in opt) ? opt.rx : latest['data-rotate-x'],
+				('ry' in opt) ? opt.ry : latest['data-rotate-y'],
+				('rz' in opt) ? opt.rz : latest['data-rotate-z'],
 				);
 		}
 	}

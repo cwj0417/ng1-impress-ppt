@@ -9,20 +9,21 @@
         <ppt>
 
         	<slide config=config.cover>
-               <h2>安哥拉杰斯介绍</h2>
-                <i>Introduction of AngularJs</i>
+               <small>3小时</small><b>安哥拉杰斯</b><small>从入门到入院</small>
+               <p> <i>Introduction of AngularJs</i> </p>
 			</slide>
 
 			<slide config=config.content>
 			    <h4>目录</h4>
                 <ul>
                     <li ng-click="goto('overview')">总体介绍</li>
-                    <li>service</li>
-                    <li>list3</li>
-                    <li>list4</li>
-                    <li>list4</li>
-                    <li>list4</li>
-                    <li>list4</li>
+                    <li ng-click="goto('service')">service</li>
+                    <li ng-click="goto('directive')">directive</li>
+                    <li ng-click="goto('makeup')">组织代码</li>
+                    <li ng-click="goto('promise')">promise</li>
+                    <li>demo 1:图片+文字=表情</li>
+                    <li>demo 2:ppt</li>
+                    <li>ppt介绍</li>
                 </ul>
 			</slide>
 
@@ -33,6 +34,7 @@
 			<slide config=config.overview_1>
 			    AngularJs 1.x(之后就简称为ng了)的结构分为html模板和js代码。
                 html主模板只有一个， 然后由js驱动应用。(有2种驱动方式)
+                ng的主要作用是提供了一个抽取重复代码的逻辑， 代码的复用性强弱可以看出遵循ng设计的程度。
 			</slide>
 
 			<slide config=config.overview_2>
@@ -55,8 +57,73 @@
 			<slide config=config.service>
 			    <span class="contentleader">service</span>
 			</slide>
+            
+            <slide config=config.service_1>
+                <p>constant <i>配置环境变量，不可修改</i></p>
+                <p>value <i>全局变量，可以修改，不常用因为不能带逻辑</i></p>
+                <p>provider <i>全局变量；封装逻辑</i></p>
+            </slide>
+            
+            <slide config=config.service_2>
+                <h3>provider</h3>
+                <h4>应用</h4>
+                <p>封装底层服务($http, $log, $location)</p>
+                <p>做队列、缓存/批量执行</p>
+                <h4>结构</h4>
+                <p>返回$get方法执行结果</p>
+                <p>其余方法可在同名provider中调用，可用做工厂模式</p>
+            </slide>
+            
+            <slide config=config.directive>
+			    <span class="contentleader">directive</span>
+            </slide>
+            
+            <slide config=config.directive_1>
+               <p>语义化标签， 封装dom操作</p> 
+               <p>分类：EMAC</p>
+               <p><b>误区：“不能用jquery”</b>应该为不能使用id、class选择器</p>
+            </slide>
+            
+            <slide config=config.makeup>
+			    <span class="contentleader">组织代码</span>
+            </slide>
 			
+            <slide config=config.makeup_1>
+               <pre>
+                    angular.module('app',['privatelibs','thirdpartlibs','env'])
+                    .config()
+                    .run()
+                    .factory()
+                    .directive()
+                    .controller()
+                    .filter()
+                </pre> 
+            </slide>
+			
+            <slide config=config.promise>
+               promise 
+            </slide>
+			
+            <slide config=config.promise_1>
+              <p><b>优点</b></p>
+              <p>避免callback hell</p>
+              <p>避免为了传播回调成功/错误而copy调用回调的代码</p>
+              <p>方便组织代码调用顺序逻辑</p>
+            </slide>
 
+            <slide config=config.promise_2>
+              <p><b>缺点</b></p>
+              <p>兼容问题：规范不统一</p>
+              <p>模式不兼容：有的时候建议使用事件监听</p>
+              <p>异常处理：每个链都需要手动捕获异常</p>
+            </slide>
+
+            <slide config=config.promise_3>
+                代码演示
+            </slide>
+            <slide config=config.airscape>
+                
+            </slide>
         </ppt>
     </body>
 </html>
